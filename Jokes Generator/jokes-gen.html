@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Joke Generator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 20px;
+  }
+  #joke-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    font-size: 18px;
+  }
+  button {
+    margin-top: 20px;
+    background: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  button:hover {
+    background: #ffdb4d;
+  }
+</style>
+</head>
+<body>
+
+<h1>😂 Random Joke Generator</h1>
+<div id="joke-box">Click the button to get a joke!</div>
+<button onclick="newJoke()">Tell me a joke</button>
+
+<script>
+  const jokes = [
+    "Why do programmers prefer dark mode? Because light attracts bugs!",
+    "Why did the computer go to therapy? It had a hard drive.",
+    "I told my computer I needed a break, and now it won’t stop sending me KitKat ads.",
+    "There are only 10 types of people in the world: those who understand binary and those who don’t.",
+    "Why was the JavaScript developer sad? Because he didn’t know how to ‘null’ his feelings.",
+    "My WiFi suddenly got stronger when I moved closer to it. Shocking discovery, I know."
+  ];
+
+  function newJoke() {
+    const randomIndex = Math.floor(Math.random() * jokes.length);
+    document.getElementById("joke-box").textContent = jokes[randomIndex];
+  }
+</script>
+
+</body>
+</html>
