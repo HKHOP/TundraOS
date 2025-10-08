@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dice Roller</title>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #1f1c2c, #928dab);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  h1 {
+    margin-bottom: 30px;
+  }
+  .dice {
+    font-size: 100px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 20px 40px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+  }
+  button {
+    margin-top: 25px;
+    background: #ffcc00;
+    color: #222;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s, transform 0.1s;
+  }
+  button:hover {
+    background: #ffdb4d;
+  }
+  button:active {
+    transform: scale(0.95);
+  }
+</style>
+</head>
+<body>
+
+<h1>🎲 Dice Roller</h1>
+<div class="dice" id="dice">🎲</div>
+<button onclick="rollDice()">Roll the Dice</button>
+
+<script>
+  function rollDice() {
+    const dice = document.getElementById("dice");
+    dice.style.transform = "rotate(360deg)";
+    setTimeout(() => dice.style.transform = "rotate(0deg)", 300);
+    
+    const roll = Math.floor(Math.random() * 6) + 1;
+    const faces = ["⚀","⚁","⚂","⚃","⚄","⚅"];
+    dice.textContent = faces[roll - 1];
+  }
+</script>
+
+</body>
+</html>
