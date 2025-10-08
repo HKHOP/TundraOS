@@ -1,7 +1,7 @@
 {
-  "name": "Pinterest Viewer",
-  "description": "A clean and minimal web app that displays Pinterest directly inside an embedded frame, allowing users to browse pins seamlessly in a fullscreen layout.",
-  "version": "1.0.0",
+  "name": "Pinterest",
+  "description": "A responsive Pinterest-style web app that loads beautiful random images endlessly as you scroll, mimicking infinite content feeds.",
+  "version": "1.1.0",
   "genre": "Social",
   "app or game": "app"
 }
